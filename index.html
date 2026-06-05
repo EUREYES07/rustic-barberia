@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rustic Barber | Barbería</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!-- header / nav -->
+    <header class="header" id="header">
+      <div class="container header-inner">
+        <a href="#inicio" class="logo">
+          <i class="fa-duotone fa-solid fa-scissors"></i>
+          <span>Rustic Barber</span>
+        </a>
+
+        <!-- Menú de navegación -->
+        <nav>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#inicio" class="color">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#reservar">Reservar</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <!-- Botón hamburguesa -->
+        <button class="hamburger" id="hamburger">
+          <i class="fa-solid fa-bars" id="hamburger-icon"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- hero (inicio)-->
+    <section id="inicio" class="hero">
+      <!-- Imagen de fondo -->
+      <img src="./assets/logo.jpg" alt="Barbería" class="hero-bg-img" />
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content container">
+        <p class="hero-eyebrow">Desde 1998</p>
+        <h1>El Arte del <br /><span>Buen Corte</span></h1>
+        <p class="hero-desc">
+          Tradición, precisión y estilo en cada navaja. Visítanos y transforma
+          tu imagen con los mejores maestros del oficio.
+        </p>
+        <div class="hero-buttons">
+          <a href="#reservar" class="btn btn-gold">Reservar Cita</a>
+          <a href="#servicios" class="btn btn-outline">Ver Servicios</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- servicios -->
+    <section id="servicios" class="seccion bg-claro">
+      <div class="container">
+        <div class="seccion-titulo">
+          <p class="etiqueta">Lo que hacemos</p>
+          <h2>Nuestros Servicios</h2>
+          <p class="subtitulo">
+            Cada servicio ejecutado con técnica artesanal y los mejores
+            productos.
+          </p>
+        </div>
+
+        <!-- Tarjetas de servicios -->
+        <div class="servicios-grid">
+          <article class="tarjeta-servicio">
+            <img src="./assets/clasico.jpeg" alt="Corte Clásico"/>
+            <div class="tarjeta-body">
+              <h3>Corte Clásico</h3>
+              <p>
+                Corte tradicional con tijeras y máquina. Incluye lavado y
+                peinado.
+              </p>
+              <div class="tarjeta-meta">
+                <span><i class="fa-regular fa-clock"></i> 30 min</span>
+                <span class="precio">$8.00</span>
+              </div>
+              <a href="#reservar" class="btn btn-gold btn-chico">Reservar</a>
+            </div>
+          </article>
+
+          <article class="tarjeta-servicio">
+            <img src="./assets/corte-barba.jpeg" alt="Corte + Barba" />
+            <div class="tarjeta-body">
+              <h3>Corte + Barba</h3>
+              <p>
+                Combo completo: corte a tu medida más perfilado y arreglo de
+                barba.
+              </p>
+              <div class="tarjeta-meta">
+                <span><i class="fa-regular fa-clock"></i> 55 min</span>
+                <span class="precio">$14.00</span>
+              </div>
+              <a href="#reservar" class="btn btn-gold btn-chico">Reservar</a>
+            </div>
+          </article>
+
+          <article class="tarjeta-servicio destacada">
+            <span class="badge">Popular</span>
+            <img src="./assets/navaja.jpeg" alt="Afeitado con Navaja" />
+            <div class="tarjeta-body">
+              <h3>Afeitado con Navaja</h3>
+              <p>
+                Afeitado tradicional con toalla caliente, aceites esenciales y
+                navaja de filo.
+              </p>
+              <div class="tarjeta-meta">
+                <span><i class="fa-regular fa-clock"></i> 45 min</span>
+                <span class="precio">$12.00</span>
+              </div>
+              <a href="#reservar" class="btn btn-gold btn-chico">Reservar</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- formulario de reserva -->
+    <section id="reservar" class="seccion bg-oscuro">
+      <div class="container">
+        <div class="seccion-titulo">
+          <p class="etiqueta">Agenda tu visita</p>
+          <h2>Reservar Cita</h2>
+          <p class="subtitulo">
+            Completa el formulario y nos pondremos en contacto contigo.
+          </p>
+        </div>
+
+        <form class="formulario" id="formulario-reserva">
+          <!-- Fila 1 -->
+          <div class="form-fila">
+            <div class="form-grupo">
+              <label for="nombre"
+                >Nombre <span class="requerido">*</span></label
+              >
+              <input type="text" id="nombre" placeholder="Tu nombre" />
+              <span class="error-campo" id="error-nombre"></span>
+            </div>
+            <div class="form-grupo">
+              <label for="apellido"
+                >Apellido <span class="requerido">*</span></label
+              >
+              <input type="text" id="apellido" placeholder="Tu apellido" />
+            </div>
+          </div>
+
+          <!-- Fila 2 -->
+          <div class="form-fila">
+            <div class="form-grupo">
+              <label for="telefono"
+                >Teléfono <span class="requerido">*</span></label
+              >
+              <input type="tel" id="telefono" placeholder="7000-0000" />
+              <span class="error-campo" id="error-telefono"></span>
+            </div>
+            <div class="form-grupo">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" placeholder="correo@ejemplo.com" />
+            </div>
+          </div>
+
+          <!-- Fila 3 -->
+          <div class="form-fila">
+            <div class="form-grupo">
+              <label for="servicio"
+                >Servicio <span class="requerido">*</span></label
+              >
+              <select id="servicio" name="servicio">
+                <option value="">-- Selecciona un servicio --</option>
+                <option value="Corte Clásico ($8.00)">
+                  Corte Clásico — $8.00
+                </option>
+                <option value="Corte + Barba ($14.00)">
+                  Corte + Barba — $14.00
+                </option>
+                <option value="Afeitado con Navaja ($12.00)">
+                  Afeitado con Navaja — $12.00
+                </option>
+              </select>
+            </div>
+            <div class="form-grupo">
+              <label for="barbero">Barbero preferido</label>
+              <select id="barbero" name="barbero">
+                <option value="Sin preferencia">Femenino</option>
+                <option value="Carlos Herrera">Masculino</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Fila 4 -->
+          <div class="form-fila">
+            <div class="form-grupo">
+              <label for="fecha">Fecha <span class="requerido">*</span></label>
+              <input type="date" id="fecha" />
+            </div>
+            <div class="form-grupo">
+              <label for="hora">Hora <span class="requerido">*</span></label>
+              <select id="hora" name="hora">
+                <option value="">-- Selecciona hora --</option>
+                <option value="08:00">08:00 AM</option>
+                <option value="08:30">08:30 AM</option>
+                <option value="09:00">09:00 AM</option>
+                <option value="09:30">09:30 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="10:30">10:30 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="11:30">11:30 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="12:30">12:30 PM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="13:30">01:30 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="14:30">02:30 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="15:30">03:30 PM</option>
+                <option value="16:00">04:00 PM</option>
+                <option value="16:30">04:30 PM</option>
+                <option value="17:00">05:00 PM</option>
+                <option value="17:30">05:30 PM</option>
+                <option value="18:00">06:00 PM</option>
+              </select>
+              <span class="error-campo" id="error-hora"></span>
+            </div>
+          </div>
+
+          <!-- Fila 5 / Notas -->
+          <div class="form-grupo">
+            <label for="notas">Notas adicionales</label>
+            <textarea
+              id="notas"
+              rows="3"
+              placeholder="Algo especial que debamos saber..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-gold btn-grande">
+            Confirmar Reserva &nbsp;<i class="fa-solid fa-check"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+    <!-- contacto -->
+    <section id="contacto" class="seccion bg-oscuro">
+      <div class="container">
+        <div class="seccion-titulo">
+          <p class="etiqueta">Encuéntranos</p>
+          <h2>Contacto</h2>
+        </div>
+
+        <div class="contacto-grid">
+          <!-- Info -->
+          <div class="contacto-info">
+            <ul class="lista-contacto">
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Av. Principal #49, Col. Centro, San Salvador</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <span>+503 7411-0020</span>
+              </li>
+              <li>
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>+503 7863-0001</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <span>contacto@rusticbarber.com</span>
+              </li>
+            </ul>
+
+            <div class="horario">
+              <h2><i class="fa-regular fa-clock"></i> Horario</h2>
+              <p>Lunes - Viernes: 8:00am - 7:00pm</p>
+              <p>Sábado: 8:00am - 5:00pm</p>
+              <p class="cerrado">Domingo: Cerrado</p>
+            </div>
+
+            <div class="redes">
+              <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="https://www.tiktok.com/" aria-label="TikTok" target="_blank"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+              <a href="https://play.google.com/store/apps/details?id=com.whatsapp&hl=es" aria-label="WhatsApp"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Mapa placeholder -->
+          <div class="mapa-placeholder">
+            <!-- Cambia src="#" por una captura de Google Maps o embed -->
+            <img src="./assets/maps.jpg" alt="Mapa de ubicación" />
+            <div class="mapa-texto">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Ver en Google Maps</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>&copy; 2026 Rustic Barber. Todos los derechos reservados.</p>
+        <div class="footer-redes">
+          <a href="#contacto" aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#contacto" aria-label="Facebook"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a href="#contacto" aria-label="WhatsApp"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
